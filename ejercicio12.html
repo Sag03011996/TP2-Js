@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Número Aleatorio</title>
+</head>
+<body>
+    <h1>Generar un Número Aleatorio entre 1 y 99</h1>
+    <button onclick="generarNumero()">Generar Número</button>
+    <p id="resultado"></p>
+
+    <script>
+        function generarNumero() {
+            // Generar un número aleatorio entre 1 y 99
+            let numeroAleatorio = Math.floor(Math.random() * 99) + 1;
+
+            // Mostrar el número en el párrafo de la página
+            document.getElementById("resultado").textContent = "Número aleatorio generado: " + numeroAleatorio;
+
+            // También lo mostramos en la consola
+            console.log("Número aleatorio generado: " + numeroAleatorio);
+        }
+    </script>
+</body>
+</html>

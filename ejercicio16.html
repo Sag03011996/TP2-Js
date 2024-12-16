@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto al Revés</title>
+</head>
+<body>
+    <h1>Invertir Cadena de Texto</h1>
+
+    <script>
+        // Solicitar al usuario que ingrese una cadena de texto
+        let texto = prompt("Introduce una cadena de texto:");
+
+        // Invertir el texto usando el método split, reverse y join
+        let textoInvertido = texto.split("").reverse().join("");
+
+        // Mostrar el texto invertido
+        alert("El texto al revés es: " + textoInvertido);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor Edad</title>
+</head>
+<body>
+    <h1>¿Quién es el mayor?</h1>
+
+    <script>
+        // Solicitar nombres y edades
+        let nombre1 = prompt("Introduce el nombre de la primera persona:");
+        let edad1 = parseInt(prompt(`Introduce la edad de ${nombre1}:`));
+
+        let nombre2 = prompt("Introduce el nombre de la segunda persona:");
+        let edad2 = parseInt(prompt(`Introduce la edad de ${nombre2}:`));
+
+        let nombre3 = prompt("Introduce el nombre de la tercera persona:");
+        let edad3 = parseInt(prompt(`Introduce la edad de ${nombre3}:`));
+
+        // Usar Math.max() para encontrar la edad más alta
+        let mayorEdad = Math.max(edad1, edad2, edad3);
+
+        // Determinar quién es el mayor
+        let nombreMayor = "";
+
+        if (mayorEdad === edad1) {
+            nombreMayor = nombre1;
+        } else if (mayorEdad === edad2) {
+            nombreMayor = nombre2;
+        } else if (mayorEdad === edad3) {
+            nombreMayor = nombre3;
+        }
+
+        // Mostrar el nombre de la persona con mayor edad
+        alert(`La persona mayor es: ${nombreMayor} con ${mayorEdad} años.`);
+    </script>
+</body>
+</html>

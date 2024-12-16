@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Descendente</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generador de Tabla Descendente</h1>
+
+    <script>
+        // Solicitar al usuario el número de filas y columnas
+        let filas = parseInt(prompt("Introduce el número de filas:"));
+        let columnas = parseInt(prompt("Introduce el número de columnas:"));
+
+        // Validar que los valores sean números positivos
+        if (isNaN(filas) || isNaN(columnas) || filas <= 0 || columnas <= 0) {
+            alert("Por favor, introduce números válidos y positivos.");
+        } else {
+            // Calcular el número inicial (el producto de filas y columnas)
+            let total = filas * columnas;
+
+            // Crear la tabla
+            let tabla = "<table>";
+
+            // Llenar la tabla con números descendentes
+            for (let i = 0; i < filas; i++) {
+                tabla += "<tr>"; // Crear una nueva fila
+
+                for (let j = 0; j < columnas; j++) {
+                    tabla += `<td>${total}</td>`; // Colocar el número en la celda
+                    total--; // Reducir el número
+                }
+
+                tabla += "</tr>"; // Cerrar la fila
+            }
+
+            tabla += "</table>"; // Cerrar la tabla
+
+            // Mostrar la tabla en el cuerpo del documento
+            document.body.innerHTML += tabla;
+        }
+    </script>
+</body>
+</html>

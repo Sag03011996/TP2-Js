@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posición de la Primera Vocal</title>
+</head>
+<body>
+    <h1>Buscar la Primera Vocal en un Texto</h1>
+
+    <script>
+        // Solicitar al usuario que ingrese un texto
+        let texto = prompt("Introduce un texto:");
+
+        // Definir las vocales
+        let vocales = "aeiouAEIOU";
+        
+        // Inicializar una variable para almacenar la posición
+        let posicion = -1;
+        let primeraVocal = '';
+
+        // Recorrer el texto para encontrar la primera vocal
+        for (let i = 0; i < texto.length; i++) {
+            // Comprobar si el carácter es una vocal
+            if (vocales.includes(texto[i])) {
+                posicion = i; // Guardar la posición de la primera vocal
+                primeraVocal = texto[i]; // Guardar la vocal encontrada
+                break; // Salir del bucle al encontrar la primera vocal
+            }
+        }
+
+        // Verificar si se encontró una vocal
+        if (posicion !== -1) {
+            alert("La vocal '" + primeraVocal + "' está en la posición " + posicion);
+        } else {
+            alert("No se encontró ninguna vocal en el texto.");
+        }
+    </script>
+</body>
+</html>

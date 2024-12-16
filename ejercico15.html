@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Vocales</title>
+</head>
+<body>
+    <h1>Contar Vocales en un Texto</h1>
+
+    <script>
+        // Solicitar al usuario que ingrese un texto
+        let texto = prompt("Introduce un texto:");
+
+        // Inicializar el contador de vocales
+        let contadorVocales = 0;
+
+        // Convertir el texto a minúsculas para evitar diferencia entre mayúsculas y minúsculas
+        texto = texto.toLowerCase();
+
+        // Recorrer cada carácter del texto
+        for (let i = 0; i < texto.length; i++) {
+            // Comprobar si el carácter es una vocal
+            if ("aeiou".includes(texto[i])) {
+                contadorVocales++;
+            }
+        }
+
+        // Mostrar el número de vocales
+        alert("El número de vocales en el texto es: " + contadorVocales);
+    </script>
+</body>
+</html>

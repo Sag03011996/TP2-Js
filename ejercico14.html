@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadena con Guiones</title>
+</head>
+<body>
+    <h1>Mostrar Cadena con Guiones</h1>
+
+    <script>
+        // Solicitar al usuario una cadena de texto
+        let cadena = prompt("Introduce una cadena de texto:");
+
+        // Crear una variable para almacenar la cadena con los guiones
+        let resultado = "";
+
+        // Recorrer cada carácter de la cadena
+        for (let i = 0; i < cadena.length; i++) {
+            // Agregar el carácter y el guion al resultado
+            resultado += cadena[i];
+            
+            // Si no es el último carácter, agregar un guion
+            if (i < cadena.length - 1) {
+                resultado += "-";
+            }
+        }
+
+        // Mostrar el resultado
+        alert("La cadena con guiones es: " + resultado);
+    </script>
+</body>
+</html>
